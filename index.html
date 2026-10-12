@@ -1,0 +1,852 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Stångåhantverkarna AB — Din lokala byggare i Linköping</title>
+<meta name="description" content="Komplett byggföretag i Linköping. Nybyggnation, ombyggnation, renovering, badrum, kök, tillbyggnad, altaner och takarbeten för privatpersoner, fastighetsägare, BRF och företag.">
+<meta name="theme-color" content="#141816">
+<meta property="og:title" content="Stångåhantverkarna AB — Din lokala byggare i Linköping">
+<meta property="og:description" content="Inget jobb är för litet eller stort för oss. Nybyggnation, renovering, badrum och uteplatser i Linköping med omnejd.">
+<meta property="og:image" content="https://stangahantverkarna.se/wp-content/uploads/2020/10/altan.jpg">
+<link rel="icon" href="assets/favicon.webp">
+<link rel="preload" href="assets/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" href="assets/hero-badrum-mobil.webp" media="(max-width: 680px)" fetchpriority="high">
+<link rel="preload" as="image" href="assets/hero-badrum-1920.webp" imagesrcset="assets/hero-badrum-960.webp 960w, assets/hero-badrum-1440.webp 1440w, assets/hero-badrum-1920.webp 1920w" imagesizes="100vw" media="(min-width: 681px)" fetchpriority="high">
+<style>
+@font-face{font-family:Archivo;font-style:normal;font-weight:400 800;font-stretch:62% 125%;font-display:swap;src:url("assets/archivo-latin.woff2") format("woff2")}
+:root{
+  --gips:#EEEBE4;
+  --gips2:#E3DFD5;
+  --sot:#141816;
+  --sot2:#1E2320;
+  --sten:#5E625C;
+  --krita:#2E5BD6;      /* snickarens kritsnöre */
+  --kritaL:#8FB0FF;
+  --ease:cubic-bezier(.22,.7,.12,1);
+  --pad:clamp(20px,4vw,56px);
+  --cond:'Archivo',Arial Narrow,Arial,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--gips);color:var(--sot);font-family:var(--cond);font-variation-settings:'wdth' 100;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button,input,textarea,select{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--krita);outline-offset:3px}
+[hidden]{display:none !important}
+.wrap{max-width:1440px;margin:0 auto;padding:0 var(--pad)}
+.disp{font-family:var(--cond);font-variation-settings:'wdth' 72;font-weight:800;text-transform:uppercase;letter-spacing:-.005em;line-height:.9}
+.lbl{font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
+.muted{color:var(--sten)}
+.sec{padding:clamp(96px,11vw,170px) 0}
+.h2{margin:0;font-size:clamp(46px,7vw,112px)}
+.kick{display:flex;align-items:center;gap:14px;margin:0 0 26px;color:var(--sten)}
+.kick::before{content:'';width:34px;height:2px;background:var(--krita)}
+
+/* ---------- Knappar ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:56px;padding:0 28px;font-weight:600;font-size:16px;border:0;cursor:pointer;position:relative;overflow:hidden;isolation:isolate;transition:color .4s ease}
+.btn::before{content:'';position:absolute;inset:0;z-index:-1;transform:scaleX(0);transform-origin:right;transition:transform .55s var(--ease)}
+.btn:hover::before{transform:scaleX(1);transform-origin:left}
+.btn svg{transition:transform .5s var(--ease)}
+.btn:hover svg{transform:translateX(4px)}
+.btn.blue{background:var(--krita);color:#fff}
+.btn.blue::before{background:var(--sot)}
+.btn.line{background:transparent;color:#fff;box-shadow:inset 0 0 0 1px rgba(255,255,255,.5)}
+.btn.line::before{background:#fff}
+.btn.line:hover{color:var(--sot)}
+.btn.dark{background:var(--sot);color:#fff}
+.btn.dark::before{background:var(--krita)}
+
+/* ---------- Header ---------- */
+.hdr{position:fixed;top:0;left:0;right:0;z-index:50;color:#fff;transition:background .45s ease,color .45s ease,transform .55s var(--ease)}
+.hdr .in{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:84px;padding:0 var(--pad)}
+.hdr.solid{background:rgba(238,235,228,.95);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);color:var(--sot);box-shadow:0 1px 0 rgba(20,24,22,.1)}
+.hdr.solid .in{min-height:84px}
+.hdr.away{transform:translateY(-100%)}
+.logo{display:inline-flex;align-items:center;flex-shrink:0;width:320px;max-width:100%;padding:0;background:transparent;line-height:1}
+.logo img{width:100%;height:auto;display:block;filter:brightness(0) invert(1)}
+.hdr.solid .logo img{filter:none}
+.nav{display:flex;align-items:center;gap:26px;font-size:15px;font-weight:500}
+.nav a.t{position:relative;padding:10px 0}
+.nav a.t::after{content:'';position:absolute;left:0;right:0;bottom:4px;height:2px;background:var(--krita);transform:scaleX(0);transform-origin:right;transition:transform .45s var(--ease)}
+.nav a.t:hover::after{transform:scaleX(1);transform-origin:left}
+.tel{display:flex;align-items:center;gap:10px;font-weight:600}
+.level{width:74px;height:16px;border-radius:999px;border:1.5px solid currentColor;position:relative;opacity:.85}
+.level::before,.level::after{content:'';position:absolute;top:2px;bottom:2px;width:1.5px;background:currentColor;opacity:.6}
+.level::before{left:calc(50% - 9px)}
+.level::after{left:calc(50% + 8px)}
+.level i{position:absolute;top:2px;left:3px;width:16px;height:9px;border-radius:999px;background:#9AD15A;box-shadow:inset 0 -2px 0 rgba(0,0,0,.12)}
+.burger{display:none;background:none;border:0;width:48px;height:48px;align-items:center;justify-content:flex-end;cursor:pointer;padding:0}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;height:100vh;height:100svh;min-height:640px;background:var(--sot);color:#fff;overflow:hidden;isolation:isolate}
+.slide{position:absolute;inset:0;z-index:-2;opacity:0;transition:opacity 1.4s ease}
+.slide.on,.slide.first{opacity:1}
+.slide picture{display:block;width:100%;height:100%}
+.slide img{width:100%;height:100%;object-fit:cover;transform:scale(1.025);transition:transform 9s cubic-bezier(.2,.4,.2,1)}
+.slide.on img{transform:scale(1)}
+.hero::after{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(14,17,15,.82) 0%,rgba(14,17,15,.45) 48%,rgba(14,17,15,.1) 100%),linear-gradient(0deg,rgba(14,17,15,.75) 0%,rgba(14,17,15,0) 40%)}
+.hero .body{position:absolute;left:0;right:0;bottom:0;padding:0 var(--pad) calc(78px + clamp(28px,5vw,64px));display:grid;grid-template-columns:minmax(0,1fr) 320px;align-items:end;gap:48px}
+.hero h1{margin:0;font-size:clamp(58px,10.4vw,178px)}
+.hero h1 .ln{display:block;overflow:hidden;padding-top:.06em}
+.hero h1 .ln>span{display:block;transform:translateY(105%);animation:rise 1.15s var(--ease) both}
+.hero h1 .ln:nth-child(1)>span{animation-delay:.25s}
+.hero h1 .ln:nth-child(2)>span{animation-delay:.38s}
+.hero h1 .blue{color:var(--kritaL)}
+.hero .lead{max-width:44ch;margin:28px 0 34px;font-size:clamp(16px,1.3vw,19px);color:rgba(255,255,255,.86)}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px}
+.chalk{position:relative;display:inline-block}
+.chalk::after{content:'';position:absolute;left:-2%;right:-2%;bottom:.06em;height:.07em;background:var(--krita);transform:scaleX(0);transform-origin:left;animation:snap .9s cubic-bezier(.3,1.6,.4,1) 1.4s forwards}
+@keyframes snap{to{transform:scaleX(1)}}
+@keyframes rise{to{transform:none}}
+.fade{opacity:0;animation:fadeup 1s var(--ease) forwards}
+.f1{animation-delay:.75s}.f2{animation-delay:.95s}.f3{animation-delay:1.15s}
+@keyframes fadeup{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.ctl{display:flex;flex-direction:column;gap:14px}
+.caps{display:grid}
+.cap{grid-area:1/1;opacity:0;transform:translateY(8px);transition:opacity .7s ease,transform .7s var(--ease)}
+.cap.on{opacity:1;transform:none}
+.cap b{display:block;font-weight:800;font-variation-settings:'wdth' 75;text-transform:uppercase;font-size:26px;line-height:1}
+.cap span{font-size:14px;color:rgba(255,255,255,.7)}
+.segs{display:flex;gap:6px}
+.seg{flex:1;min-width:44px;height:32px;background:linear-gradient(rgba(255,255,255,.3),rgba(255,255,255,.3)) center/100% 3px no-repeat;position:relative;overflow:hidden;border:0;padding:0;cursor:pointer}
+.seg::before{content:'';position:absolute;inset:-12px 0}
+.seg i{position:absolute;inset:calc(50% - 1.5px) 0 auto;height:3px;background:var(--kritaL);transform:scaleX(0);transform-origin:left}
+.seg.done i{transform:scaleX(1)}
+.seg.on i{animation:fill 7s linear forwards}
+.slide-controls{display:flex;align-items:center;gap:14px}.slide-controls .segs{flex:1}
+.slide-pause{display:flex;align-items:center;justify-content:center;width:44px;height:44px;padding:0;flex-shrink:0;background:transparent;border:1px solid rgba(255,255,255,.55);color:#fff;cursor:pointer}
+.slide-pause svg{width:14px;height:14px}.slide-pause .play-icon{display:none}.slide-pause[aria-pressed="true"] .pause-icon{display:none}.slide-pause[aria-pressed="true"] .play-icon{display:block}
+.hero.is-paused .seg.on i,.hero.is-paused .ruler .track{animation-play-state:paused}
+@keyframes fill{to{transform:scaleX(1)}}
+.ruler{position:absolute;left:0;right:0;bottom:0;height:78px;background:#F2D24A;color:var(--sot);overflow:hidden;display:flex;align-items:center;transform:translateY(100%);animation:rul .9s var(--ease) .5s forwards}
+@keyframes rul{to{transform:none}}
+.ruler::before{content:'';position:absolute;inset:0 0 auto 0;height:26px;background:
+  linear-gradient(90deg,var(--sot) 2px,transparent 2px) 0 0/100px 26px repeat-x,
+  linear-gradient(90deg,var(--sot) 1.5px,transparent 1.5px) 50px 0/100px 16px repeat-x,
+  linear-gradient(90deg,var(--sot) 1px,transparent 1px) 0 0/10px 9px repeat-x}
+.ruler .track{display:flex;width:max-content;animation:mq 42s linear infinite;padding-top:20px}
+.ruler .track span{display:flex;align-items:center;gap:28px;padding:0 28px;white-space:nowrap;font-weight:800;font-variation-settings:'wdth' 75;text-transform:uppercase;font-size:22px}
+.ruler .track span::after{content:'';width:8px;height:8px;background:var(--sot);transform:rotate(45deg)}
+@keyframes mq{to{transform:translateX(-50%)}}
+.coord{position:absolute;right:calc(var(--pad) - 4px);top:50%;transform:translateY(-50%) rotate(180deg);writing-mode:vertical-rl;font-size:12px;letter-spacing:.12em;color:rgba(255,255,255,.6)}
+
+/* ---------- Förtroende ---------- */
+.trust{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-bottom:1px solid rgba(20,24,22,.14)}
+.trust > div{padding:30px 28px;border-right:1px solid rgba(20,24,22,.14);display:flex;align-items:center;gap:18px}
+.trust > div:last-child{border-right:0}
+.trust img{height:38px;width:auto;object-fit:contain}
+.trust b{display:block;font-weight:700;font-size:16px;line-height:1.2}
+.trust span{font-size:14px;color:var(--sten)}
+.ico{width:42px;height:42px;flex-shrink:0;border:1.5px solid var(--sot);display:flex;align-items:center;justify-content:center}
+
+/* ---------- Om oss ---------- */
+.about{display:grid;grid-template-columns:7fr 5fr;gap:clamp(40px,6vw,110px);align-items:end}
+.about .big{margin:0;font-size:clamp(34px,4.2vw,66px);line-height:1.02;font-weight:700;font-variation-settings:'wdth' 82;letter-spacing:-.01em}
+.about .big em{font-style:normal;color:var(--krita)}
+.about p.txt{margin:34px 0 0;max-width:56ch;font-size:18px;color:#3A3F3B}
+.who{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+.who span{border:1px solid rgba(20,24,22,.25);padding:8px 16px;font-size:14px;font-weight:500}
+.about-img{position:relative;aspect-ratio:4/5;overflow:hidden;background:var(--gips2)}
+.about-img img{width:100%;height:118%;object-fit:cover}
+.about-img .tag{position:absolute;left:0;bottom:0;background:var(--sot);color:#fff;padding:14px 20px;font-size:14px}
+
+/* ---------- Tjänster ---------- */
+.svc-top{display:flex;justify-content:space-between;align-items:end;gap:32px;flex-wrap:wrap;margin-bottom:56px}
+.bento{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:16px}
+.tile{position:relative;overflow:hidden;background:var(--sot);color:#fff;min-height:300px;display:flex;flex-direction:column;justify-content:flex-end;padding:28px;isolation:isolate}
+.tile.big{grid-column:span 6;min-height:560px}
+.tile.mid{grid-column:span 3;min-height:560px}
+.tile img{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}
+.tile::after{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg,rgba(14,17,15,.85) 0%,rgba(14,17,15,.1) 60%)}
+.tile:hover img{transform:scale(1.05)}
+.tile h3{margin:0;font-size:clamp(34px,3.4vw,56px)}
+.tile p{margin:12px 0 0;max-width:38ch;color:rgba(255,255,255,.82);font-size:16px}
+.tile .go{position:absolute;top:24px;right:24px;width:48px;height:48px;border-radius:50%;border:1px solid rgba(255,255,255,.5);display:flex;align-items:center;justify-content:center;transition:background .4s ease,color .4s ease,transform .5s var(--ease)}
+.tile:hover .go{background:#fff;color:var(--sot);transform:rotate(-45deg)}
+.list{grid-column:span 12;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));border-top:2px solid var(--sot);margin-top:24px}
+.list > a{padding:26px 22px 30px 0;border-right:1px solid rgba(20,24,22,.14);display:flex;flex-direction:column;gap:14px;transition:background .4s ease,padding .45s var(--ease)}
+.list > a + a{padding-left:22px}
+.list > a:last-child{border-right:0}
+.list > a:hover{background:var(--gips2)}
+.list h4{margin:0;font-size:24px;line-height:1.05}
+.list p{margin:0;font-size:15px;color:var(--sten)}
+.list .ar{margin-top:auto;color:var(--krita);font-weight:600;font-size:14px;display:flex;align-items:center;gap:8px}
+
+/* ---------- Process ---------- */
+.proc{background:var(--sot);color:#fff;overflow:hidden}
+.proc .kick{color:rgba(255,255,255,.6)}
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin-top:72px;position:relative}
+.steps::before{content:'';position:absolute;left:0;right:0;top:27px;height:2px;background:rgba(255,255,255,.15)}
+.steps .snap{position:absolute;left:0;right:0;top:27px;height:2px;background:var(--kritaL);transform:scaleX(0);transform-origin:left;transition:transform 1.6s cubic-bezier(.3,1.25,.4,1)}
+.steps.in .snap{transform:scaleX(1)}
+.step{position:relative;padding-right:32px}
+.step .dot{width:56px;height:56px;border-radius:50%;background:var(--sot);border:2px solid rgba(255,255,255,.25);display:flex;align-items:center;justify-content:center;font-weight:800;font-variation-settings:'wdth' 75;font-size:22px;position:relative;z-index:1;transition:border-color .5s ease,background .5s ease}
+.steps.in .step .dot{border-color:var(--kritaL)}
+.step h3{margin:28px 0 10px;font-size:32px}
+.step p{margin:0;color:rgba(255,255,255,.72);font-size:16px;max-width:30ch}
+
+/* ---------- Projekt ---------- */
+.gal{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:16px;margin-top:56px}
+.gal button{position:relative;padding:0;border:0;background:var(--gips2);overflow:hidden;cursor:zoom-in}
+.gal img{width:100%;height:100%;object-fit:cover;transition:transform 1.1s var(--ease)}
+.gal button:hover img{transform:scale(1.05)}
+.gal button span{position:absolute;left:16px;bottom:14px;background:var(--gips);color:var(--sot);padding:6px 12px;font-size:13px;font-weight:600;transform:translateY(8px);opacity:0;transition:opacity .4s ease,transform .5s var(--ease)}
+.gal button:hover span{opacity:1;transform:none}
+.g1{grid-column:span 7;aspect-ratio:7/5}
+.g2{grid-column:span 5;aspect-ratio:5/5}
+.g3{grid-column:span 4;aspect-ratio:4/5}
+.g4{grid-column:span 4;aspect-ratio:4/5}
+.g5{grid-column:span 4;aspect-ratio:4/5}
+.g6{grid-column:span 5;aspect-ratio:1/1}
+.g7{grid-column:span 7;aspect-ratio:7/5}
+
+/* ---------- Omdömen ---------- */
+.revsec{background:var(--gips2)}
+.rev-head{display:grid;grid-template-columns:minmax(0,1fr) 380px;gap:48px;align-items:end;margin-bottom:64px}
+.stars{display:inline-flex;gap:2px;color:#F2B807}
+.gbadge{background:#fff;padding:28px;display:flex;flex-direction:column;gap:14px;box-shadow:0 1px 0 rgba(20,24,22,.06),0 20px 50px -24px rgba(20,24,22,.25);transition:transform .5s var(--ease),box-shadow .5s ease}
+.gbadge:hover{transform:translateY(-4px);box-shadow:0 1px 0 rgba(20,24,22,.06),0 30px 60px -24px rgba(20,24,22,.3)}
+.gb-top{display:flex;align-items:center;gap:12px;font-weight:600;font-size:16px}
+.gb-score{display:flex;align-items:center;gap:16px;padding:14px 0;border-top:1px solid rgba(20,24,22,.1);border-bottom:1px solid rgba(20,24,22,.1)}
+.gb-n{font-size:64px;line-height:.9}
+.gb-score .stars svg{width:22px;height:22px}
+.gb-cnt{font-size:14px;color:var(--sten)}
+.gb-cta{font-weight:600;color:var(--krita)}
+.rev-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.rc{margin:0;background:#fff;padding:30px;display:flex;flex-direction:column;gap:22px;transition:transform .5s var(--ease)}
+.rc:hover{transform:translateY(-4px)}
+.rc-top{display:flex;justify-content:space-between;align-items:center}
+.rc blockquote{margin:0;font-size:18px;line-height:1.55;flex:1}
+.rc figcaption{display:flex;align-items:center;gap:14px;padding-top:20px;border-top:1px solid rgba(20,24,22,.1)}
+.rc .av{width:44px;height:44px;border-radius:50%;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;flex-shrink:0}
+.rc figcaption b{display:block;font-size:15px}
+.rc figcaption span span{font-size:13px;color:var(--sten)}
+.rc.feat{grid-column:span 2;grid-row:span 2;background:var(--sot);color:#fff;padding:clamp(32px,4vw,56px);position:relative;overflow:hidden}
+.rc.feat .bigq{font-family:Georgia,serif;font-size:220px;line-height:.7;color:var(--krita);display:block;height:100px}
+.rc.feat blockquote{font-size:clamp(24px,2.4vw,38px);line-height:1.22;font-weight:500;font-variation-settings:'wdth' 88;letter-spacing:-.01em}
+.rc.feat figcaption{border-top-color:rgba(255,255,255,.15)}
+.rc.feat figcaption > .stars{margin-left:auto}
+.rc.feat figcaption span span{color:rgba(255,255,255,.6)}
+.ul{background:linear-gradient(currentColor,currentColor) 0 100%/100% 2px no-repeat;padding-bottom:3px;font-weight:600;transition:background-size .45s var(--ease)}
+.ul:hover{background-size:0 2px;background-position:100% 100%}
+
+/* ---------- FAQ ---------- */
+.faq{display:grid;grid-template-columns:5fr 7fr;gap:clamp(40px,6vw,110px)}
+details{border-top:1px solid rgba(20,24,22,.18)}
+details:last-child{border-bottom:1px solid rgba(20,24,22,.18)}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:26px 0;font-size:clamp(20px,1.8vw,26px);font-weight:600;font-variation-settings:'wdth' 90}
+summary::-webkit-details-marker{display:none}
+summary .pm{width:34px;height:34px;flex-shrink:0;position:relative;border:1px solid rgba(20,24,22,.3);border-radius:50%;transition:background .3s ease,transform .5s var(--ease)}
+summary .pm::before,summary .pm::after{content:'';position:absolute;left:50%;top:50%;width:12px;height:1.5px;background:currentColor;transform:translate(-50%,-50%)}
+summary .pm::after{transform:translate(-50%,-50%) rotate(90deg);transition:transform .4s var(--ease)}
+details[open] summary .pm{background:var(--sot);color:#fff}
+details[open] summary .pm::after{transform:translate(-50%,-50%) rotate(0)}
+details .a{padding:0 0 28px;max-width:62ch;color:#3A3F3B}
+
+/* ---------- Kontakt ---------- */
+.contact{background:var(--sot);color:#fff}
+.contact .kick{color:rgba(255,255,255,.6)}
+.cgrid{display:grid;grid-template-columns:6fr 6fr;gap:clamp(40px,6vw,100px);margin-top:64px}
+.people{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.person{background:var(--sot2);padding:28px;display:flex;flex-direction:column;gap:6px}
+.person .role{font-size:14px;color:var(--kritaL);font-weight:600}
+.person b{font-size:26px;font-weight:800;font-variation-settings:'wdth' 75;text-transform:uppercase;line-height:1.05}
+.person a{display:flex;align-items:center;gap:10px;padding:8px 0;font-size:16px;color:rgba(255,255,255,.88);overflow-wrap:anywhere}
+.person a:hover{color:#fff}
+.person .phone{margin-top:14px;font-size:22px;font-weight:700;color:#fff}
+.addr{margin-top:16px;padding:28px;border:1px solid rgba(255,255,255,.14);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.map{margin-top:16px;aspect-ratio:16/9;filter:grayscale(1) contrast(1.05) brightness(.9);border:0;width:100%}
+.form{background:var(--gips);color:var(--sot);padding:clamp(28px,3vw,44px)}
+.form h3{margin:0 0 8px;font-size:clamp(34px,3.4vw,52px)}
+.form{display:flex;flex-direction:column}
+.form .sub{margin:0 0 22px;color:var(--sten)}
+.tips{list-style:none;margin:0 0 32px;padding:0;border-top:1px solid rgba(20,24,22,.16)}
+.tips li{display:flex;gap:18px;align-items:baseline;padding:16px 0;border-bottom:1px solid rgba(20,24,22,.16);font-size:17px}
+.tips li span{font-size:13px;font-weight:700;color:var(--krita);letter-spacing:.06em}
+.mailbtn{width:100%;min-height:72px;font-size:19px;gap:14px;margin-top:auto}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+.chips label{position:relative;cursor:pointer}
+.chips input{position:absolute;opacity:0;pointer-events:none}
+.chips span{display:inline-flex;align-items:center;min-height:42px;padding:0 16px;border:1px solid rgba(20,24,22,.28);font-size:14px;font-weight:500;transition:background .25s ease,color .25s ease,border-color .25s ease}
+.chips input:checked + span{background:var(--sot);color:#fff;border-color:var(--sot)}
+.chips input:focus-visible + span{outline:2px solid var(--krita);outline-offset:2px}
+.fld{display:flex;flex-direction:column;gap:8px;margin-bottom:18px}
+.fld label{font-size:14px;font-weight:600}
+.fld input,.fld textarea{border:0;border-bottom:1.5px solid rgba(20,24,22,.35);background:transparent;padding:12px 0;font-size:17px;border-radius:0;outline:none;transition:border-color .3s ease}
+.fld input:focus,.fld textarea:focus{border-color:var(--krita)}
+.fld textarea{min-height:110px;resize:vertical}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+
+/* ---------- Footer ---------- */
+.foot{background:var(--sot);color:rgba(255,255,255,.75);border-top:1px solid rgba(255,255,255,.1);padding:56px 0 40px}
+.fgrid{display:flex;justify-content:space-between;align-items:flex-start;gap:40px;flex-wrap:wrap}
+.foot a:hover{color:#fff}
+.badges{display:flex;gap:20px;align-items:center;flex-wrap:wrap}
+.badges img{height:40px;width:auto;object-fit:contain;background:#fff;padding:6px 10px}
+.footer-brand{display:flex;flex-direction:column;gap:30px;max-width:100%}
+.footer-logo{width:320px;max-width:100%}
+.fbase{margin-top:32px;padding-top:24px;border-top:1px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px}
+
+/* ---------- Lightbox ---------- */
+.lb{position:fixed;inset:0;z-index:95;background:rgba(12,14,13,.96);display:flex;align-items:center;justify-content:center;color:#fff}
+.lb img{max-width:92vw;max-height:82vh;object-fit:contain;animation:fadeup .45s var(--ease) both}
+.lb .x{position:absolute;top:16px;right:var(--pad);width:52px;height:52px;border:1px solid rgba(255,255,255,.4);background:none;color:#fff;cursor:pointer;display:inline-flex;align-items:center;justify-content:center}
+.lb .p,.lb .n{position:absolute;top:50%;transform:translateY(-50%);border-color:rgba(255,255,255,.4);color:#fff}
+.lb .p{left:var(--pad)}.lb .n{right:var(--pad)}
+.lb .c{position:absolute;bottom:calc(22px + env(safe-area-inset-bottom,0px));left:0;right:0;text-align:center;font-size:14px;color:rgba(255,255,255,.7)}
+
+/* ---------- Avslöjande vid skroll ---------- */
+.rvl{opacity:0;transform:translateY(36px);transition:opacity 1s ease,transform 1.1s var(--ease)}
+.rvl.in{opacity:1;transform:none}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}
+
+/* ---------- Mobilmeny + bar ---------- */
+.mm{position:fixed;inset:0;z-index:80;background:var(--sot);color:#fff;display:flex;flex-direction:column;padding:16px var(--pad) calc(26px + env(safe-area-inset-bottom,0px));animation:mmin .5s var(--ease) both}
+@keyframes mmin{from{clip-path:inset(0 0 100% 0)}to{clip-path:inset(0 0 0 0)}}
+.mm .top{display:flex;justify-content:space-between;align-items:center;min-height:56px;margin-bottom:28px}
+.mm nav a{display:flex;justify-content:space-between;align-items:center;font-size:48px;padding:6px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+.mm .bot{margin-top:auto;display:grid;gap:10px}
+.mbar{display:none}
+
+@media (max-width:1180px){
+  .nav .t,.nav .tel{display:none}
+  .burger{display:inline-flex}
+  .hero .body{grid-template-columns:minmax(0,1fr);gap:30px}
+  .ctl{max-width:420px}
+  .trust{grid-template-columns:1fr 1fr}
+  .trust > div:nth-child(2){border-right:0}
+  .trust > div:nth-child(-n+2){border-bottom:1px solid rgba(20,24,22,.14)}
+  .about,.rev-head,.faq,.cgrid{grid-template-columns:minmax(0,1fr)}
+  .rev-grid{grid-template-columns:1fr 1fr}
+  .rc.feat{grid-column:span 2;grid-row:auto}
+  .tile.big,.tile.mid{grid-column:span 12;min-height:420px}
+  .list{grid-template-columns:1fr 1fr}
+  .list > a,.list > a + a{padding:22px 18px 26px 0;border-right:0;border-bottom:1px solid rgba(20,24,22,.14)}
+  .list > a:nth-child(odd){border-right:1px solid rgba(20,24,22,.14)}
+  .list > a:nth-child(even){padding-left:18px}
+  .steps{grid-template-columns:1fr 1fr;row-gap:56px}
+  .steps::before,.steps .snap{display:none}
+}
+@media (max-width:680px){
+  .hero{min-height:600px}
+  .hero .body{padding-bottom:calc(64px + 32px)}
+  .ruler{height:64px}
+  .ruler .track span{font-size:18px}
+  .coord{display:none}
+  .hero::after{background:linear-gradient(0deg,rgba(14,17,15,.92) 0%,rgba(14,17,15,.55) 50%,rgba(14,17,15,.25) 100%)}
+  .cta-row .btn{flex:1 1 100%}
+  .t-cta{display:none !important}
+  .logo{width:min(260px,calc(100vw - 104px));padding:0}
+  .hero{min-height:740px}
+  .hdr .in,.hdr.solid .in{min-height:80px}
+  .trust{grid-template-columns:1fr}
+  .trust > div{border-right:0 !important;border-bottom:1px solid rgba(20,24,22,.14)}
+  .list{grid-template-columns:1fr}
+  .list > a,.list > a + a,.list > a:nth-child(even){padding:22px 0;border-right:0 !important}
+  .steps{grid-template-columns:1fr}
+  .gal{grid-template-columns:1fr 1fr;gap:10px}
+  .gal > button{grid-column:span 1 !important;aspect-ratio:4/5 !important}
+  .gal > button:first-child{grid-column:span 2 !important;aspect-ratio:4/3 !important}
+  .rev-grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin:0 calc(var(--pad) * -1);padding:0 var(--pad) 6px}
+  .rev-grid::-webkit-scrollbar{display:none}
+  .rc,.rc.feat{flex:0 0 86%;scroll-snap-align:center}
+  .rc.feat .bigq{font-size:150px;height:70px}
+  .rc.feat figcaption > .stars{display:none}
+  .people,.frow{grid-template-columns:1fr}
+  .mbar{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:10px;right:10px;bottom:calc(10px + env(safe-area-inset-bottom,0px));z-index:40;box-shadow:0 12px 30px rgba(0,0,0,.28);transform:translateY(160%);transition:transform .6s var(--ease)}
+  .mbar.show{transform:none}
+  .mbar a{display:flex;align-items:center;justify-content:center;gap:10px;min-height:56px;font-weight:600}
+  .mbar a:first-child{background:var(--sot);color:#fff}
+  .mbar a:last-child{background:var(--krita);color:#fff}
+  .foot{padding-bottom:110px}
+  .lb .p,.lb .n{top:auto;bottom:calc(64px + env(safe-area-inset-bottom,0px));transform:none}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms !important;animation-delay:0s !important;transition-duration:.01ms !important}
+  html{scroll-behavior:auto}
+  .slide img,.about-img img{transform:none!important}
+  .hero h1 .ln>span,.ruler{transform:none}
+  .fade,.rvl{opacity:1;transform:none}
+}
+::selection{background:var(--krita);color:#fff}
+@media (max-width:680px){.hero h1{font-size:clamp(42px,13.8vw,58px)}.hero .body{gap:22px}.hero .lead{margin:22px 0 26px}.cap b{font-size:clamp(20px,6vw,26px)}.rev-head .h2{font-size:clamp(34px,10.5vw,46px)}}
+@media (min-width:681px) and (max-height:780px){.hero{min-height:780px}}
+</style>
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="hdr" id="hdr">
+  <div class="in">
+    <a href="#top" class="logo" aria-label="Stångåhantverkarna, till toppen"><img src="assets/stangahantverkarna-logo.png" width="1444" height="226" alt="Stångåhantverkarna – kvalité från Östergötland" decoding="async"></a>
+    <nav class="nav" aria-label="Huvudmeny">
+      <a class="t" href="#om-oss">Om oss</a>
+      <a class="t" href="#tjanster">Tjänster</a>
+      <a class="t" href="#projekt">Projekt</a>
+      <a class="t" href="#omdomen">Omdömen</a>
+      <a class="tel" href="tel:+46730854065" aria-label="Ring 073-085 40 65">
+        <span class="level" aria-hidden="true"><i id="bubble"></i></span>
+        073-085 40 65
+      </a>
+      <a class="btn blue t-cta" href="#kontakt" style="min-height:48px;padding:0 22px">Begär offert</a>
+      <button class="burger" id="openMenu" type="button" aria-label="Öppna meny" aria-expanded="false" aria-controls="mm">
+        <svg width="26" height="14" viewBox="0 0 26 14" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M0 1h26M8 13h18"/></svg>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<div class="mm" id="mm" role="dialog" aria-modal="true" aria-label="Meny" hidden>
+  <div class="top">
+    <span class="logo"><img src="assets/stangahantverkarna-logo.png" width="1444" height="226" alt="Stångåhantverkarna – kvalité från Östergötland" decoding="async"></span>
+    <button type="button" id="closeMenu" aria-label="Stäng meny" style="background:none;border:0;width:48px;height:48px;display:inline-flex;align-items:center;justify-content:flex-end;cursor:pointer;padding:0;color:#fff">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M2 2l16 16M18 2L2 18"/></svg>
+    </button>
+  </div>
+  <nav aria-label="Mobilmeny" class="disp">
+    <a href="#om-oss" data-close>Om oss</a>
+    <a href="#tjanster" data-close>Tjänster</a>
+    <a href="#projekt" data-close>Projekt</a>
+    <a href="#omdomen" data-close>Omdömen</a>
+    <a href="#kontakt" data-close>Kontakt</a>
+  </nav>
+  <div class="bot">
+    <a href="tel:+46730854065" class="btn line">Ring 073-085 40 65</a>
+    <a href="#kontakt" class="btn blue" data-close>Begär offert</a>
+  </div>
+</div>
+
+<main>
+<!-- ================= HERO ================= -->
+<section class="hero" id="top">
+  <div class="slide first"><picture>
+    <source media="(max-width:680px)" srcset="assets/hero-badrum-mobil.webp">
+    <img src="assets/hero-badrum-1920.webp" srcset="assets/hero-badrum-960.webp 960w, assets/hero-badrum-1440.webp 1440w, assets/hero-badrum-1920.webp 1920w" sizes="100vw" width="1920" height="1281" alt="Ljust badrum med glasdusch – bild från Stångåhantverkarnas hemsida" fetchpriority="high" decoding="async">
+  </picture></div>
+  <div class="slide" aria-hidden="true"><picture>
+    <source media="(max-width:680px)" data-srcset="assets/hero-linkoping-mobil.webp">
+    <img data-src="assets/hero-linkoping-1920.webp" data-srcset="assets/hero-linkoping-960.webp 960w, assets/hero-linkoping-1440.webp 1440w, assets/hero-linkoping-1920.webp 1920w" sizes="100vw" width="1920" height="1278" alt="Utsikt över Linköping" decoding="async">
+  </picture></div>
+
+  <span class="coord fade f3">58.41° N — 15.62° Ö · Linköping</span>
+
+  <div class="body">
+    <div>
+      <h1 class="disp">
+        <span class="ln"><span>Din lokala byggare</span></span>
+        <span class="ln"><span>i <span class="chalk blue">Linköping</span>.</span></span>
+      </h1>
+      <p class="lead fade f2">Ett väletablerat, komplett byggföretag för nybyggnation, renovering, badrum och tillbyggnader. Inget jobb är för litet eller stort för oss.</p>
+      <div class="cta-row fade f3">
+        <a href="#kontakt" class="btn blue">Begär offert
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg>
+        </a>
+        <a href="tel:+46730854065" class="btn line">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 2h3l1.5 3.5L5.8 6.6a8 8 0 0 0 3.6 3.6l1.1-1.7L14 10v3a1 1 0 0 1-1 1A11 11 0 0 1 2 3a1 1 0 0 1 1-1z"/></svg>
+          073-085 40 65</a>
+      </div>
+    </div>
+    <div class="ctl fade f3">
+      <div class="caps">
+        <div class="cap on"><b>Badrum &amp; renovering</b><span>Badrum, kakel och klinker</span></div>
+        <div class="cap" aria-hidden="true"><b>Lokala i Linköping</b><span>Linköping med omnejd</span></div>
+      </div>
+      <div class="slide-controls">
+        <div class="segs" id="segs">
+          <button class="seg on" type="button" aria-label="Visa badrum" aria-current="true"><i></i></button>
+          <button class="seg" type="button" aria-label="Visa Linköping"><i></i></button>
+        </div>
+        <button class="slide-pause" id="pauseSlides" type="button" aria-label="Pausa bildspelet" aria-pressed="false">
+          <svg class="pause-icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M3 2h3v12H3zm7 0h3v12h-3z"/></svg>
+          <svg class="play-icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="m4 2 10 6-10 6z"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="ruler" aria-hidden="true">
+    <div class="track">
+      <span>Nybyggnation</span><span>Ombyggnation</span><span>Renovering</span><span>Badrum</span><span>Köksrenovering</span><span>Tillbyggnation</span><span>Uteplatser &amp; altaner</span><span>Takarbeten</span>
+      <span>Nybyggnation</span><span>Ombyggnation</span><span>Renovering</span><span>Badrum</span><span>Köksrenovering</span><span>Tillbyggnation</span><span>Uteplatser &amp; altaner</span><span>Takarbeten</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FÖRTROENDE ================= -->
+<section class="wrap" aria-label="Trygghet">
+  <div class="trust">
+    <div class="rvl"><span class="ico" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 10.5l4 4 8-9"/></svg></span><span><b>Godkänd för F-skatt</b><span>Org.nr 559223-6276</span></span></div>
+    <div class="rvl d1"><img src="assets/bkr2.webp" alt="Byggkeramikrådet" width="160" height="160" decoding="async" loading="lazy"><span><b>Byggkeramikrådet</b><span>Våtrum, kakel och klinker</span></span></div>
+    <div class="rvl d2"><img src="assets/iD06_v2_reversed.webp" alt="ID06" style="background:var(--sot);padding:6px 8px" width="256" height="123" decoding="async" loading="lazy"><span><b>ID06</b><span>Registrerade på byggarbetsplatsen</span></span></div>
+    <div class="rvl d3"><span class="ico" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M10 18s6-5.2 6-10A6 6 0 0 0 4 8c0 4.8 6 10 6 10z"/><circle cx="10" cy="8" r="2"/></svg></span><span><b>Lokala i Linköping</b><span>Linköping med omnejd</span></span></div>
+  </div>
+</section>
+
+<!-- ================= OM OSS ================= -->
+<section class="sec" id="om-oss">
+  <div class="wrap about">
+    <div>
+      <p class="kick lbl rvl">Om oss</p>
+      <p class="big rvl">Väl utförda arbeten, tydlig kommunikation och servicekänsla. <em>Därför kommer kunderna tillbaka.</em></p>
+      <p class="txt rvl">Stångåhantverkarna AB är ett väletablerat komplett byggföretag som utför alla vanligt förekommande byggarbeten vid byggnation, snickeri, renoveringar och tillbyggnader. Vi jobbar idag med återkommande kunder och via rekommendation.</p>
+      <div class="who rvl" aria-label="Vi hjälper">
+        <span>Privatpersoner</span><span>Fastighetsägare</span><span>Bostadsrättsföreningar</span><span>Företag</span>
+      </div>
+    </div>
+    <div class="about-img rvl">
+      <img data-par="0.1" src="assets/church-2554797_1920.webp" alt="Linköpings domkyrka" loading="lazy" width="800" height="533" decoding="async">
+      <span class="tag">Sunnorpsgatan 14, Linköping</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TJÄNSTER ================= -->
+<section class="sec" id="tjanster" style="padding-top:0">
+  <div class="wrap">
+    <div class="svc-top">
+      <div>
+        <p class="kick lbl rvl">Våra tjänster</p>
+        <h2 class="h2 disp rvl">Från grund<br>till nock</h2>
+      </div>
+      <p class="rvl" style="max-width:40ch;margin:0;color:#3A3F3B">Vi tar hand om hela jobbet, eller den del du behöver hjälp med. Ett samtal räcker för att komma igång.</p>
+    </div>
+
+    <div class="bento">
+      <a class="tile big rvl" href="#kontakt" data-svc="Nybyggnation">
+        <img src="assets/412r564r.webp" alt="" loading="lazy" width="800" height="533" decoding="async">
+        <span class="go" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 8h11M9 4l4 4-4 4"/></svg></span>
+        <h3 class="disp">Nybyggnation</h3>
+        <p>Nya hus, garage och komplementbyggnader — byggda ordentligt från första stund.</p>
+      </a>
+      <a class="tile mid rvl d1" href="#kontakt" data-svc="Badrum">
+        <img src="assets/badrum.webp" alt="" loading="lazy" width="800" height="533" decoding="async">
+        <span class="go" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 8h11M9 4l4 4-4 4"/></svg></span>
+        <h3 class="disp">Badrum</h3>
+        <p>Renovering med kakel och klinker.</p>
+      </a>
+      <a class="tile mid rvl d2" href="#kontakt" data-svc="Uteplatser &amp; altaner">
+        <img src="assets/altan.webp" alt="" loading="lazy" width="800" height="533" decoding="async">
+        <span class="go" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 8h11M9 4l4 4-4 4"/></svg></span>
+        <h3 class="disp">Altaner</h3>
+        <p>Uteplatser och altaner att njuta av.</p>
+      </a>
+
+      <div class="list">
+        <a href="#kontakt" class="rvl" data-svc="Ombyggnation"><h4 class="disp">Ombyggnation</h4><p>Ny planlösning, nya rum, nytt flöde.</p><span class="ar">Begär offert →</span></a>
+        <a href="#kontakt" class="rvl d1" data-svc="Renovering"><h4 class="disp">Renovering</h4><p>Lyft det du redan har.</p><span class="ar">Begär offert →</span></a>
+        <a href="#kontakt" class="rvl d2" data-svc="Köksrenovering"><h4 class="disp">Kök</h4><p>Köksrenovering från rivning till färdigt.</p><span class="ar">Begär offert →</span></a>
+        <a href="#kontakt" class="rvl d3" data-svc="Tillbyggnation"><h4 class="disp">Tillbyggnad</h4><p>Mer yta, utan att flytta.</p><span class="ar">Begär offert →</span></a>
+        <a href="#kontakt" class="rvl" data-svc="Takarbeten"><h4 class="disp">Takarbeten</h4><p>Tak som håller i många år.</p><span class="ar">Begär offert →</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROCESS ================= -->
+<section class="sec proc">
+  <div class="wrap">
+    <p class="kick lbl rvl">Så går det till</p>
+    <h2 class="h2 disp rvl">Raka besked.<br>Rak vägg.</h2>
+    <div class="steps" id="steps">
+      <span class="snap" aria-hidden="true"></span>
+      <div class="step rvl"><span class="dot">1</span><h3 class="disp">Hör av dig</h3><p>Ring eller skicka en förfrågan och berätta vad du vill göra.</p></div>
+      <div class="step rvl d1"><span class="dot">2</span><h3 class="disp">Platsbesök</h3><p>Vi kommer ut, tittar på förutsättningarna och lyssnar på dina önskemål.</p></div>
+      <div class="step rvl d2"><span class="dot">3</span><h3 class="disp">Offert</h3><p>Du får en tydlig offert så att du vet vad som ingår.</p></div>
+      <div class="step rvl d3"><span class="dot">4</span><h3 class="disp">Vi bygger</h3><p>Vi utför jobbet och håller dig uppdaterad hela vägen till färdigt resultat.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROJEKT ================= -->
+<section class="sec" id="projekt">
+  <div class="wrap">
+    <div class="svc-top" style="margin-bottom:0">
+      <div>
+        <p class="kick lbl rvl">Utfört arbete</p>
+        <h2 class="h2 disp rvl">Vårt hantverk</h2>
+      </div>
+      <a class="ul rvl" href="https://www.instagram.com/stangahantverkarna/" target="_blank" rel="noopener">Fler projekt på Instagram →</a>
+    </div>
+    <div class="gal" id="gal">
+      <button type="button" class="g1 rvl" data-lb aria-label="Visa bild i helskärm"><img src="assets/412r564r.webp" alt="Nybyggnation" loading="lazy" width="800" height="533" decoding="async"><span>Nybyggnation</span></button>
+      <button type="button" class="g2 rvl d1" data-lb aria-label="Visa bild i helskärm"><img src="assets/117037687_293333438419545_4887551669509162122_n.webp" alt="Projekt av Stångåhantverkarna" loading="lazy" width="800" height="533" decoding="async"><span>Projekt</span></button>
+      <button type="button" class="g3 rvl" data-lb aria-label="Visa bild i helskärm"><img src="assets/badrum.webp" alt="Badrum" loading="lazy" width="800" height="533" decoding="async"><span>Badrum</span></button>
+      <button type="button" class="g4 rvl d1" data-lb aria-label="Visa bild i helskärm"><img src="assets/103161310_550867819152158_7571175182420699614_n.webp" alt="Projekt av Stångåhantverkarna" loading="lazy" width="800" height="533" decoding="async"><span>Projekt</span></button>
+      <button type="button" class="g5 rvl d2" data-lb aria-label="Visa bild i helskärm"><img src="assets/96515981_481897855922424_2600677857521761501_n.webp" alt="Projekt av Stångåhantverkarna" loading="lazy" width="800" height="533" decoding="async"><span>Projekt</span></button>
+      <button type="button" class="g6 rvl" data-lb aria-label="Visa bild i helskärm"><img src="assets/altan.webp" alt="Altan" loading="lazy" width="800" height="533" decoding="async"><span>Altan</span></button>
+      <button type="button" class="g7 rvl d1" data-lb aria-label="Visa bild i helskärm"><img src="assets/linkoping.webp" alt="Linköping" loading="lazy" width="800" height="533" decoding="async"><span>Linköping</span></button>
+    </div>
+  </div>
+</section>
+
+<!-- ================= OMDÖMEN ================= -->
+<!-- ================= OMDÖMEN =================
+     Klistra in riktiga Google-omdömen: byt texten i <blockquote>, namn (<b>) och tjänst (<span>).
+     Fyll i betyg och antal i .gbadge, och länken till Google-profilen i href="[LÄNK TILL GOOGLE-OMDÖMEN]". -->
+<section class="sec revsec" id="omdomen">
+  <div class="wrap">
+    <div class="rev-head">
+      <div>
+        <p class="kick lbl rvl">Omdömen</p>
+        <h2 class="h2 disp rvl">Kunderna<br>rekommenderar oss</h2>
+        <p class="rvl" style="margin:26px 0 0;max-width:44ch;color:#3A3F3B">Vi jobbar idag med återkommande kunder och via rekommendation. Här är vad några av dem säger.</p>
+      </div>
+      <a class="gbadge rvl d1" href="[LÄNK TILL GOOGLE-OMDÖMEN]" target="_blank" rel="noopener">
+        <span class="gb-top"><svg class="g" width="28" height="28" viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.1H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 13 4 4 13 4 24s9 20 20 20 20-9 20-20c0-1.3-.1-2.6-.4-3.9z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.1H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.6-.4-3.9z"/></svg><span>Google-omdömen</span></span>
+        <span class="gb-score"><span class="disp gb-n">[5,0]</span><span class="stars" aria-label="5 av 5 stjärnor"><svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.5l2.6 5.5 6 .7-4.4 4.1 1.2 6-5.4-3-5.4 3 1.2-6L1.4 7.7l6-.7z"/></svg><svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.5l2.6 5.5 6 .7-4.4 4.1 1.2 6-5.4-3-5.4 3 1.2-6L1.4 7.7l6-.7z"/></svg><svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.5l2.6 5.5 6 .7-4.4 4.1 1.2 6-5.4-3-5.4 3 1.2-6L1.4 7.7l6-.7z"/></svg><svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.5l2.6 5.5 6 .7-4.4 4.1 1.2 6-5.4-3-5.4 3 1.2-6L1.4 7.7l6-.7z"/></svg><svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.5l2.6 5.5 6 .7-4.4 4.1 1.2 6-5.4-3-5.4 3 1.2-6L1.4 7.7l6-.7z"/></svg></span></span>
+        <span class="gb-cnt">Baserat på [antal] omdömen</span>
+        <span class="gb-cta">Läs alla omdömen →</span>
+      </a>
+    </div>
+
+    <div class="rev-grid">
+      <figure class="rc feat rvl">
+        <span class="bigq" aria-hidden="true">”</span>
+        <blockquote>[Det längsta och bästa omdömet placeras här — gärna ett om ett större jobb som badrum eller tillbyggnad.]</blockquote>
+        <figcaption><span class="av" style="background:var(--krita)">A</span><span><b>[Kundens namn]</b><span>[Badrumsrenovering · Linköping]</span></span><span class="stars" aria-label="5 av 5 stjärnor"><svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.5l2.6 5.5 6 .7-4.4 4.1 1.2 6-5.4-3-5.4 3 1.2-6L1.4 7.7l6-.7z"/></svg><svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.5l2.6 5.5 6 .7-4.4 4.1 1.2 6-5.4-3-5.4 3 1.2-6L1.4 7.7l6-.7z"/></svg><svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.5l2.6 5.5 6 .7-4.4 4.1 1.2 6-5.4-3-5.4 3 1.2-6L1.4 7.7l6-.7z"/></svg><svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.5l2.6 5.5 6 .7-4.4 4.1 1.2 6-5.4-3-5.4 3 1.2-6L1.4 7.7l6-.7z"/></svg><svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.5l2.6 5.5 6 .7-4.4 4.1 1.2 6-5.4-3-5.4 3 1.2-6L1.4 7.7l6-.7z"/></svg></span></figcaption>
+      </figure>
+        <figure class="rc rvl">
+          <div class="rc-top"><span class="stars" aria-label="5 av 5 stjärnor"><svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.5l2.6 5.5 6 .7-4.4 4.1 1.2 6-5.4-3-5.4 3 1.2-6L1.4 7.7l6-.7z"/></svg><svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.5l2.6 5.5 6 .7-4.4 4.1 1.2 6-5.4-3-5.4 3 1.2-6L1.4 7.7l6-.7z"/></svg><svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.5l2.6 5.5 6 .7-4.4 4.1 1.2 6-5.4-3-5.4 3 1.2-6L1.4 7.7l6-.7z"/></svg><svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.5l2.6 5.5 6 .7-4.4 4.1 1.2 6-5.4-3-5.4 3 1.2-6L1.4 7.7l6-.7z"/></svg><svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.5l2.6 5.5 6 .7-4.4 4.1 1.2 6-5.4-3-5.4 3 1.2-6L1.4 7.7l6-.7z"/></svg></span><svg class="g" width="20" height="20" viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.1H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 13 4 4 13 4 24s9 20 20 20 20-9 20-20c0-1.3-.1-2.6-.4-3.9z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.1H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.6-.4-3.9z"/></svg></div>
+          <blockquote>[Kort omdöme om altanbygget.]</blockquote>
+          <figcaption><span class="av" style="background:#B4553A">B</span><span><b>[Kundens namn]</b><span>[Altan · Linköping]</span></span></figcaption>
+        </figure>
+        <figure class="rc rvl">
+          <div class="rc-top"><span class="stars" aria-label="5 av 5 stjärnor"><svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.5l2.6 5.5 6 .7-4.4 4.1 1.2 6-5.4-3-5.4 3 1.2-6L1.4 7.7l6-.7z"/></svg><svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.5l2.6 5.5 6 .7-4.4 4.1 1.2 6-5.4-3-5.4 3 1.2-6L1.4 7.7l6-.7z"/></svg><svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.5l2.6 5.5 6 .7-4.4 4.1 1.2 6-5.4-3-5.4 3 1.2-6L1.4 7.7l6-.7z"/></svg><svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.5l2.6 5.5 6 .7-4.4 4.1 1.2 6-5.4-3-5.4 3 1.2-6L1.4 7.7l6-.7z"/></svg><svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.5l2.6 5.5 6 .7-4.4 4.1 1.2 6-5.4-3-5.4 3 1.2-6L1.4 7.7l6-.7z"/></svg></span><svg class="g" width="20" height="20" viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.1H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 13 4 4 13 4 24s9 20 20 20 20-9 20-20c0-1.3-.1-2.6-.4-3.9z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.1H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.6-.4-3.9z"/></svg></div>
+          <blockquote>[Omdöme om tillbyggnaden och hur projektet sköttes.]</blockquote>
+          <figcaption><span class="av" style="background:#3E6B4F">C</span><span><b>[Kundens namn]</b><span>[Tillbyggnad · Linköping]</span></span></figcaption>
+        </figure>
+        <figure class="rc rvl">
+          <div class="rc-top"><span class="stars" aria-label="5 av 5 stjärnor"><svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.5l2.6 5.5 6 .7-4.4 4.1 1.2 6-5.4-3-5.4 3 1.2-6L1.4 7.7l6-.7z"/></svg><svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.5l2.6 5.5 6 .7-4.4 4.1 1.2 6-5.4-3-5.4 3 1.2-6L1.4 7.7l6-.7z"/></svg><svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.5l2.6 5.5 6 .7-4.4 4.1 1.2 6-5.4-3-5.4 3 1.2-6L1.4 7.7l6-.7z"/></svg><svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.5l2.6 5.5 6 .7-4.4 4.1 1.2 6-5.4-3-5.4 3 1.2-6L1.4 7.7l6-.7z"/></svg><svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.5l2.6 5.5 6 .7-4.4 4.1 1.2 6-5.4-3-5.4 3 1.2-6L1.4 7.7l6-.7z"/></svg></span><svg class="g" width="20" height="20" viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.1H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 13 4 4 13 4 24s9 20 20 20 20-9 20-20c0-1.3-.1-2.6-.4-3.9z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.1H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.6-.4-3.9z"/></svg></div>
+          <blockquote>[Omdöme från en bostadsrättsförening.]</blockquote>
+          <figcaption><span class="av" style="background:#7A5A2B">D</span><span><b>[BRF-namn]</b><span>[Ombyggnation · Bostadsrättsförening]</span></span></figcaption>
+        </figure>
+        <figure class="rc rvl">
+          <div class="rc-top"><span class="stars" aria-label="5 av 5 stjärnor"><svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.5l2.6 5.5 6 .7-4.4 4.1 1.2 6-5.4-3-5.4 3 1.2-6L1.4 7.7l6-.7z"/></svg><svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.5l2.6 5.5 6 .7-4.4 4.1 1.2 6-5.4-3-5.4 3 1.2-6L1.4 7.7l6-.7z"/></svg><svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.5l2.6 5.5 6 .7-4.4 4.1 1.2 6-5.4-3-5.4 3 1.2-6L1.4 7.7l6-.7z"/></svg><svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.5l2.6 5.5 6 .7-4.4 4.1 1.2 6-5.4-3-5.4 3 1.2-6L1.4 7.7l6-.7z"/></svg><svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.5l2.6 5.5 6 .7-4.4 4.1 1.2 6-5.4-3-5.4 3 1.2-6L1.4 7.7l6-.7z"/></svg></span><svg class="g" width="20" height="20" viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.1H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 13 4 4 13 4 24s9 20 20 20 20-9 20-20c0-1.3-.1-2.6-.4-3.9z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.1H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.6-.4-3.9z"/></svg></div>
+          <blockquote>[Omdöme om köksrenoveringen.]</blockquote>
+          <figcaption><span class="av" style="background:#2E4A6B">E</span><span><b>[Kundens namn]</b><span>[Kök · Linköping]</span></span></figcaption>
+        </figure>
+        <figure class="rc rvl">
+          <div class="rc-top"><span class="stars" aria-label="5 av 5 stjärnor"><svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.5l2.6 5.5 6 .7-4.4 4.1 1.2 6-5.4-3-5.4 3 1.2-6L1.4 7.7l6-.7z"/></svg><svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.5l2.6 5.5 6 .7-4.4 4.1 1.2 6-5.4-3-5.4 3 1.2-6L1.4 7.7l6-.7z"/></svg><svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.5l2.6 5.5 6 .7-4.4 4.1 1.2 6-5.4-3-5.4 3 1.2-6L1.4 7.7l6-.7z"/></svg><svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.5l2.6 5.5 6 .7-4.4 4.1 1.2 6-5.4-3-5.4 3 1.2-6L1.4 7.7l6-.7z"/></svg><svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.5l2.6 5.5 6 .7-4.4 4.1 1.2 6-5.4-3-5.4 3 1.2-6L1.4 7.7l6-.7z"/></svg></span><svg class="g" width="20" height="20" viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.1H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 13 4 4 13 4 24s9 20 20 20 20-9 20-20c0-1.3-.1-2.6-.4-3.9z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.1H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.6-.4-3.9z"/></svg></div>
+          <blockquote>[Omdöme om takarbetet.]</blockquote>
+          <figcaption><span class="av" style="background:#5B4B7A">F</span><span><b>[Kundens namn]</b><span>[Takarbete · Linköping]</span></span></figcaption>
+        </figure>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ================= FAQ ================= -->
+<section class="sec">
+  <div class="wrap faq">
+    <div>
+      <p class="kick lbl rvl">Vanliga frågor</p>
+      <h2 class="h2 disp rvl">Bra att<br>veta</h2>
+    </div>
+    <div class="rvl">
+      <details open><summary>Tar ni även mindre jobb?<span class="pm" aria-hidden="true"></span></summary><div class="a">Ja. Inget jobb är för litet eller stort för oss — från en enskild reparation till en hel nybyggnation.</div></details>
+      <details><summary>Vilka områden jobbar ni i?<span class="pm" aria-hidden="true"></span></summary><div class="a">Vi utgår från Sunnorpsgatan i Linköping och jobbar i Linköping med omnejd.</div></details>
+      <details><summary>Vem ska jag kontakta?<span class="pm" aria-hidden="true"></span></summary><div class="a">För badrum, kakel och klinker: André Fritzsche, 073-085 40 65. För snickeri, tillbyggnad och altaner: Johan Ingmarsson, 070-399 60 97. Du kan också mejla oss via knappen längre ner.</div></details>
+      <details><summary>Jobbar ni åt bostadsrättsföreningar och företag?<span class="pm" aria-hidden="true"></span></summary><div class="a">Ja. Vi hjälper privatpersoner, fastighetsägare, bostadsrättsföreningar och företag.</div></details>
+      <details><summary>Är ni godkända för F-skatt?<span class="pm" aria-hidden="true"></span></summary><div class="a">Ja, Stångåhantverkarna AB är godkänt för F-skatt. Organisationsnummer 559223-6276.</div></details>
+    </div>
+  </div>
+</section>
+
+<!-- ================= KONTAKT ================= -->
+<section class="sec contact" id="kontakt">
+  <div class="wrap">
+    <p class="kick lbl rvl">Kontakt</p>
+    <h2 class="h2 disp rvl">Vad ska<br>vi bygga?</h2>
+    <div class="cgrid">
+      <div>
+        <div class="people">
+          <div class="person rvl">
+            <span class="role">Badrum, kakel och klinker</span>
+            <b>André Fritzsche</b>
+            <a class="phone" href="tel:+46730854065">073-085 40 65</a>
+            <a href="mailto:andre@stangahantverkarna.se">andre@stangahantverkarna.se</a>
+          </div>
+          <div class="person rvl d1">
+            <span class="role">Snickare</span>
+            <b>Johan Ingmarsson</b>
+            <a class="phone" href="tel:+46703996097">070-399 60 97</a>
+            <a href="mailto:johan@stangahantverkarna.se">johan@stangahantverkarna.se</a>
+          </div>
+        </div>
+        <div class="addr rvl">
+          <span><span class="lbl" style="color:rgba(255,255,255,.55)">Besöksadress</span><br>Sunnorpsgatan 14<br>582 73 Linköping</span>
+          <a class="ul" href="https://maps.google.com/?q=Sunnorpsgatan+14,+582+73+Link%C3%B6ping" target="_blank" rel="noopener" style="align-self:flex-end">Vägbeskrivning →</a>
+        </div>
+        <iframe class="map rvl" title="Karta: Sunnorpsgatan 14, Linköping" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d80384.91730724345!2d15.600648562565576!3d58.402330402873666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465968ca44bfb2b9%3A0x488b272fdc262907!2sSunnorpsgatan%2014%2C%20582%2073%20Link%C3%B6ping!5e0!3m2!1sen!2sse!4v1745823708068!5m2!1sen!2sse"></iframe>
+      </div>
+
+      <div class="form rvl d1">
+        <h3 class="disp">Begär offert</h3>
+        <p class="sub">Skicka ett mejl så återkommer vi. Berätta gärna:</p>
+        <ul class="tips">
+          <li><span>01</span>Vad du vill göra — badrum, altan, tillbyggnad …</li>
+          <li><span>02</span>Var jobbet ska göras</li>
+          <li><span>03</span>Ungefär när du vill komma igång</li>
+          <li><span>04</span>Gärna några bilder på hur det ser ut i dag</li>
+        </ul>
+        <a class="btn dark mailbtn" id="mailbtn" href="mailto:andre@stangahantverkarna.se,johan@stangahantverkarna.se?subject=Offertf%C3%B6rfr%C3%A5gan">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M2 4h14v10H2zM2 4.5l7 5.5 7-5.5"/></svg>
+          Mejla oss
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg>
+        </a>
+        <p class="muted" style="margin:16px 0 0;font-size:13px">Öppnar ditt mejlprogram. Mejlet går till både André och Johan. Läs vår <a class="ul" style="font-weight:500" href="https://stangahantverkarna.se/wp-content/uploads/2020/10/integritetspolicy-gdpr-stangahantverkarna.se_.pdf" target="_blank" rel="noopener">integritetspolicy</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="fgrid">
+      <div class="footer-brand">
+        <a class="logo footer-logo" href="#top" aria-label="Stångåhantverkarna, till toppen"><img src="assets/stangahantverkarna-logo.png" width="1444" height="226" alt="Stångåhantverkarna – kvalité från Östergötland" loading="lazy" decoding="async"></a>
+        <div class="badges">
+        <img src="assets/bkr2.webp" alt="Byggkeramikrådet" loading="lazy" width="160" height="160" decoding="async">
+        <img src="assets/iD06_v2_reversed.webp" alt="ID06" loading="lazy" style="background:transparent;padding:0" width="256" height="123" decoding="async">
+        </div>
+      </div>
+      <div style="display:flex;gap:28px;flex-wrap:wrap;font-size:15px">
+        <a href="#om-oss">Om oss</a><a href="#tjanster">Tjänster</a><a href="#projekt">Projekt</a><a href="#kontakt">Kontakt</a>
+        <a href="https://www.instagram.com/stangahantverkarna/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.facebook.com/St%C3%A5ng%C3%A5hantverkarna-107598270678054/" target="_blank" rel="noopener">Facebook</a>
+      </div>
+    </div>
+    <div class="fbase">
+      <span>© 2026 Stångåhantverkarna AB · Godkänd för F-skatt · Org.nr 559223-6276</span>
+      <span>Sunnorpsgatan 14, 582 73 Linköping</span>
+    </div>
+  </div>
+</footer>
+
+<div class="mbar" id="mbar">
+  <a href="tel:+46730854065"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 2h3l1.5 3.5L5.8 6.6a8 8 0 0 0 3.6 3.6l1.1-1.7L14 10v3a1 1 0 0 1-1 1A11 11 0 0 1 2 3a1 1 0 0 1 1-1z"/></svg>Ring</a>
+  <a href="#kontakt">Begär offert</a>
+</div>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Bildvisning" hidden>
+  <button class="x" type="button" id="lbx" aria-label="Stäng"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M2 2l14 14M16 2L2 16"/></svg></button>
+  <img id="lbimg" alt="">
+  <button class="arw p" type="button" id="lbp" aria-label="Föregående bild"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M10 3L5 8l5 5"/></svg></button>
+  <button class="arw n" type="button" id="lbn" aria-label="Nästa bild"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 3l5 5-5 5"/></svg></button>
+  <div class="c" id="lbc"></div>
+</div>
+
+<script>
+(function(){
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var $=function(s,r){return (r||document).querySelector(s);};
+  var $$=function(s,r){return [].slice.call((r||document).querySelectorAll(s));};
+
+  /* ---------- Hero-bildspel ---------- */
+  var hero=$('.hero'),slides=$$('.slide'),caps=$$('.cap'),segs=$$('#segs .seg'),cur=0,timer;
+  var pauseButton=$('#pauseSlides'),paused=reduce,heroVisible=true,sequence=0;
+  function loadSlide(i){
+    var image=$('img',slides[i]);
+    $$('source[data-srcset]',slides[i]).forEach(function(source){source.srcset=source.dataset.srcset;source.removeAttribute('data-srcset');});
+    if(image.dataset.srcset){image.srcset=image.dataset.srcset;delete image.dataset.srcset;}
+    if(image.dataset.src){image.src=image.dataset.src;delete image.dataset.src;}
+    return image.decode?image.decode().catch(function(){}):Promise.resolve();
+  }
+  function schedule(){
+    clearTimeout(timer);
+    var stopped=paused||!heroVisible||document.hidden;
+    hero.classList.toggle('is-paused',stopped);
+    if(!stopped)timer=setTimeout(function(){go(cur+1);},7000);
+  }
+  async function go(i){
+    var target=(i+slides.length)%slides.length,ticket=++sequence;
+    await loadSlide(target);
+    if(ticket!==sequence)return;
+    cur=target;
+    slides.forEach(function(slide,j){slide.classList.toggle('on',j===cur);slide.setAttribute('aria-hidden',j===cur?'false':'true');});
+    slides[0].classList.remove('first');
+    caps.forEach(function(cap,j){cap.classList.toggle('on',j===cur);cap.setAttribute('aria-hidden',j===cur?'false':'true');});
+    segs.forEach(function(seg,j){seg.classList.remove('on');seg.classList.toggle('done',j<cur);seg.setAttribute('aria-current',j===cur?'true':'false');});
+    requestAnimationFrame(function(){if(ticket===sequence)segs[cur].classList.add('on');});
+    schedule();
+  }
+  function pauseState(){pauseButton.setAttribute('aria-pressed',String(paused));pauseButton.setAttribute('aria-label',paused?'Starta bildspelet':'Pausa bildspelet');schedule();}
+  pauseButton.addEventListener('click',function(){paused=!paused;pauseState();});
+  segs.forEach(function(seg,j){seg.addEventListener('click',function(){go(j);});});
+  document.addEventListener('visibilitychange',schedule);
+  if('IntersectionObserver' in window)new IntersectionObserver(function(entries){heroVisible=entries[0].isIntersecting;schedule();},{threshold:0}).observe(hero);
+  pauseState();go(0);
+  var sx=null;
+  hero.addEventListener('touchstart',function(e){sx=e.touches[0].clientX;},{passive:true});
+  hero.addEventListener('touchend',function(e){if(sx===null)return;var dx=e.changedTouches[0].clientX-sx;if(Math.abs(dx)>50)go(cur+(dx<0?1:-1));sx=null;},{passive:true});
+
+  /* ---------- One scroll update per frame; read layout before writes ---------- */
+  var hdr=$('#hdr'),mbar=$('#mbar'),bubble=$('#bubble'),pars=$$('[data-par]'),lastY=0,queued=false;
+  var mobile=window.matchMedia('(max-width:680px)');
+  function onScroll(){
+    queued=false;
+    var y=window.scrollY,h=hero.offsetHeight,vh=window.innerHeight,max=document.documentElement.scrollHeight-vh;
+    var positions=(!reduce&&!mobile.matches)?pars.map(function(el){return {el:el,rect:el.parentElement.getBoundingClientRect()};}):[];
+    var past=y>h-90;
+    hdr.classList.toggle('solid',past);
+    hdr.classList.toggle('away',past&&y>lastY+4&&y>h+200);
+    if(y<lastY-4)hdr.classList.remove('away');
+    mbar.classList.toggle('show',y>h*.55);
+    if(bubble)bubble.style.transform='translateX('+((max>0?y/max:0)*49)+'px)';
+    lastY=y;
+    positions.forEach(function(item){var r=item.rect;if(r.bottom<0||r.top>vh)return;var p=(r.top+r.height/2-vh/2)/vh;item.el.style.transform='translate3d(0,'+(-p*parseFloat(item.el.dataset.par)*100-8)+'%,0)';});
+  }
+  function requestScroll(){if(!queued){queued=true;requestAnimationFrame(onScroll);}}
+  window.addEventListener('scroll',requestScroll,{passive:true});
+  window.addEventListener('resize',requestScroll,{passive:true});
+  onScroll();
+
+  /* ---------- Avslöjande vid skroll ---------- */
+  var io=('IntersectionObserver' in window)?new IntersectionObserver(function(es){
+    es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+  },{rootMargin:'0px 0px -10% 0px',threshold:.12}):null;
+  $$('.rvl').concat([$('#steps')]).forEach(function(el){if(io&&!reduce)io.observe(el);else el.classList.add('in');});
+
+  /* ---------- Mobilmeny ---------- */
+  var mm=$('#mm'),ob=$('#openMenu'),cb=$('#closeMenu');
+  function menu(o){mm.hidden=!o;ob.setAttribute('aria-expanded',o?'true':'false');document.documentElement.style.overflow=o?'hidden':'';(o?cb:ob).focus();}
+  ob.addEventListener('click',function(){menu(true);});
+  cb.addEventListener('click',function(){menu(false);});
+  $$('[data-close]',mm).forEach(function(a){a.addEventListener('click',function(){menu(false);});});
+
+  /* ---------- Tjänst -> ämnesrad i mejlet ---------- */
+  var mb=$('#mailbtn');
+  $$('[data-svc]').forEach(function(a){
+    a.addEventListener('click',function(){
+      mb.href='mailto:andre@stangahantverkarna.se,johan@stangahantverkarna.se?subject='+encodeURIComponent('Offertförfrågan: '+a.dataset.svc);
+    });
+  });
+
+  /* ---------- Lightbox ---------- */
+  var lb=$('#lb'),li=$('#lbimg'),lc=$('#lbc'),btns=$$('[data-lb]'),idx=0,opener=null;
+  function show(i){idx=(i+btns.length)%btns.length;var im=$('img',btns[idx]);li.style.animation='none';void li.offsetWidth;li.style.animation='';li.src=im.dataset.full||im.currentSrc||im.src;li.alt=im.alt;lc.textContent=(idx+1)+' av '+btns.length+' · '+im.alt;}
+  function close(){lb.hidden=true;document.documentElement.style.overflow='';if(opener)opener.focus();}
+  btns.forEach(function(b,i){b.addEventListener('click',function(){opener=b;lb.hidden=false;document.documentElement.style.overflow='hidden';show(i);$('#lbx').focus();});});
+  $('#lbx').addEventListener('click',close);
+  $('#lbp').addEventListener('click',function(){show(idx-1);});
+  $('#lbn').addEventListener('click',function(){show(idx+1);});
+  lb.addEventListener('click',function(e){if(e.target===lb)close();});
+  var lx=null;
+  lb.addEventListener('touchstart',function(e){lx=e.touches[0].clientX;},{passive:true});
+  lb.addEventListener('touchend',function(e){if(lx===null)return;var dx=e.changedTouches[0].clientX-lx;if(Math.abs(dx)>50)show(idx+(dx<0?1:-1));lx=null;});
+  document.addEventListener('keydown',function(e){
+    if(!mm.hidden&&e.key==='Escape')menu(false);
+    if(lb.hidden)return;
+    if(e.key==='Escape')close();
+    if(e.key==='ArrowRight')show(idx+1);
+    if(e.key==='ArrowLeft')show(idx-1);
+  });
+})();
+</script>
+</body>
+</html>

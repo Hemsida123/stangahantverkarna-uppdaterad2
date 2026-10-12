@@ -1,0 +1,17 @@
+STÅNGÅHANTVERKARNA – UPPDATERAD HEMSIDA
+
+Ladda upp index.html och hela mappen assets tillsammans till GitHub eller webbhotellet. Behåll mappnamnet assets. Alla sökvägar är relativa och fungerar även i en undermapp på GitHub Pages.
+
+Öppna index.html lokalt för att förhandsgranska sidan.
+
+Uppdaterat 12 oktober 2026:
+- Företagets riktiga logotyp från stangahantverkarna.se ersätter den konstruerade S-symbolen och textlogotypen. Logotypen har transparent bakgrund i header, mobilmeny och footer, med vit återgivning mot mörka ytor och originalfärger i den ljusa headern.
+- Heron använder bilder från företagets egen webbplats med originalbredd 1920 pixlar. Den tidigare 800-pixelsbilden är kvar bland tjänster och projekt.
+- Bilder och typsnitt levereras lokalt. WebP-bilder, mobilanpassade heroformat, prioriterad första bild och senare laddning av nästa hero.
+- Bildspelet kan pausas och stannar när heron eller fliken inte syns. Minskad rörelse respekteras. Scrolluppdateringar samlas per bildruta.
+
+Bildernas källa: https://stangahantverkarna.se/
+Logotyp: https://stangahantverkarna.se/wp-content/uploads/2020/10/Stangahantverkarna_logo_small.png
+Typsnitt: Archivo, licens i assets/Archivo-LICENSE.txt.
+
+Befintligt innehåll är bevarat. Omdömesdelen i den bifogade originalfilen innehåller fortfarande platshållare för kundnamn, citat, betyg och Google-länk; riktiga omdömen behöver läggas in innan den delen används skarpt.
